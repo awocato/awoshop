@@ -45,7 +45,7 @@ function ProductPage({
       key={product.id}
     >
       <div className="hidden lg:inline space-y-4">
-        {product.images.map((image, index) => (
+        {product.images.map((image:string, index) => (
           <Image
             key={image}
             src={image}
@@ -61,7 +61,7 @@ function ProductPage({
         className=" mb-10 lg:mb-0 lg:w-full self-start flex items-center max-w-xl lg:max-w-md mx-auto lg:mx-20"
       >
         <CarouselContent>
-          {product.images.map((image, index) => (
+          {product.images.map((image:string, index) => (
             <CarouselItem key={index}>
               <div>
                 <div className="flex items-center justify-center relative">
