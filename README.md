@@ -13,7 +13,7 @@ This project is a modern e-commerce platform built with Next.js, TypeScript, and
 ## Features
 
 - **Parallel and Intercepting Routes**: The application uses advanced routing techniques to load multiple routes in parallel and intercept routes to control the navigation flow.
-- **Responsive Design**: The application is fully responsive and optimized for mobile, tablet, and desktop devices. Please note that the modal is not responsive.
+- **Responsive Design**: The application is fully responsive and optimized for mobile, tablet, and desktop devices. 
 
 ## Screenshots
 

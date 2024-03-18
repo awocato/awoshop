@@ -2,12 +2,17 @@
 
 import Basket from "@/components/Basket";
 import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogHeader,
-    DialogTitle,
-  } from "@/components/ui/dialog"
+  Credenza,
+  CredenzaBody,
+  CredenzaClose,
+  CredenzaContent,
+  CredenzaDescription,
+  CredenzaFooter,
+  CredenzaHeader,
+  CredenzaTitle,
+  CredenzaTrigger,
+} from "@/components/ui/credenza"
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { useRouter } from "next/navigation";
   
 
@@ -19,24 +24,25 @@ function BasketInterception() {
     }
   return (
     <main>
-<Dialog open
+<Credenza open
    onOpenChange={(isOpen) => {
     if (!isOpen) {
         onDismiss();
     }
    }}
 >
-  <DialogContent className="h-4/5 w-full overflow-scroll max-w-3xl">
-    <DialogHeader>
-      <DialogTitle>Basket</DialogTitle>
-      <DialogDescription>
+  <CredenzaContent className="h-4/5 w-full max-w-3xl">
+    <CredenzaHeader>
+      <CredenzaTitle>Basket</CredenzaTitle>
+      <CredenzaDescription>
         Contents of your basket
-      </DialogDescription>
-    </DialogHeader>
-
+      </CredenzaDescription>
+    </CredenzaHeader>
+    <ScrollArea className="h-auto overflow-y-auto">
     <Basket/>
-  </DialogContent>
-</Dialog>
+    </ScrollArea>
+  </CredenzaContent>
+</Credenza>
 </main>
   )
 }

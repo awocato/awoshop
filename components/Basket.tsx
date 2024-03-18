@@ -20,7 +20,7 @@ function Basket() {
           const total = getCartTotal(grouped[id]);
 
           return (
-            <li key={id} className="p-5 my-2 flex items-center justify-between">
+            <li key={id} className="p-2 my-2 flex items-center justify-between">
               {item.images[0] && (
                 <Image
                   src={item.images[0]}
