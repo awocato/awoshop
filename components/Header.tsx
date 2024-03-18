@@ -56,18 +56,20 @@ function Header() {
 
       <form
         onSubmit={isHomePage ? handleSubmit : undefined}
-        className="flex items-center bg-white rounded-full w-full flex-1"
+        className="flex items-center bg-white rounded-full md:w-full lg:max-w-full sm:max-w-72 "
       >
         <input
         required
           onInput={isSearchPage ? handleChange : undefined}
           name="input"
-          className="flex-1 px-4 rounded-l-full outline-none text-black placeholder:text-sm"
+          className="flex-1 max-w-72 px-4 
+          md:max-w-full md:w-full
+          rounded-l-full  outline-none text-black placeholder:text-sm"
           type="text"
           placeholder="Search Everything..."
         />
         <button type="submit">
-          <Search className="rounded-full h-10 px-2 w-10 bg-yellow-400  text-w cursor-pointer" />
+          <Search className="rounded-full h-10 px-2 w-10 bg-yellow-400 cursor-pointer" />
         </button>
       </form>
       <div className="flex space-x-5 mt-5 md:mt-0">
